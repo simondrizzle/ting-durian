@@ -72,6 +72,14 @@ body {
   display: flex;
   align-items: center;
   gap: 10px;
+  min-width: 0;
+}
+
+.brand__text {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  min-width: 0;
 }
 
 .brand__logo {
@@ -91,6 +99,13 @@ body {
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
+}
+
+.brand__tagline {
+  font-size: 0.68rem;
+  line-height: 1.35;
+  color: var(--color-text-muted);
+  font-weight: 500;
 }
 
 .header__actions {

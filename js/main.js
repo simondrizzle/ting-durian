@@ -146,6 +146,7 @@
     document.title = t('pageTitle');
     $('meta[name="description"]').setAttribute('content', t('metaDesc'));
 
+    $('#brandTagline').textContent = t('brandTagline');
     $('#openContact').setAttribute('aria-label', t('contactAria'));
     $('#langToggle').textContent = t('langSwitch');
     $('#langToggle').setAttribute('aria-label', t('langSwitchAria'));
