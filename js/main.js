@@ -1,7 +1,9 @@
 (function () {
   'use strict';
 
-  const { whatsappNumber, wechatId, products } = SITE_CONFIG;
+  const APP_DATA = JSON.parse(document.getElementById('app-data').textContent);
+  const { whatsappNumber, wechatId, products } = APP_DATA;
+  const I18N = APP_DATA.i18n;
 
   const $ = (sel) => document.querySelector(sel);
   const productGrid = $('#productGrid');
@@ -17,13 +19,18 @@
   let lang = localStorage.getItem('ting-lang') || 'zh';
   let toastTimer = null;
 
-  function t(key, ...args) {
-    const val = I18N[lang][key];
-    return typeof val === 'function' ? val(...args) : val;
+  function fmt(template, vars) {
+    return template.replace(/\{(\w+)\}/g, (_, key) => (vars[key] != null ? vars[key] : ''));
+  }
+
+  function t(key, vars) {
+    const raw = I18N[lang][key] || '';
+    return vars ? fmt(raw, vars) : raw;
   }
 
   function pText(product, field) {
-    return product[lang]?.[field] ?? product.zh[field];
+    const val = product[lang]?.[field];
+    return val != null ? val : product.zh[field];
   }
 
   function tierLabel(tier) {
@@ -34,7 +41,7 @@
     if (!product) return t('defaultMsg');
     const name = pText(product, 'name');
     const detail = tier ? `${tierLabel(tier)} ${tier.price}` : '';
-    return t('orderMsg', name, detail);
+    return t('orderMsg', { name, detail }).trim();
   }
 
   function buildWhatsAppUrl(message) {
@@ -63,9 +70,9 @@
   }
 
   function openWechatModal(product, tier) {
-    const detail = tier ? `${tierLabel(tier)} ${tier.price}` : '';
+    const detail = tier ? ` · ${tierLabel(tier)} ${tier.price}` : '';
     $('#wechatProductName').textContent = product
-      ? t('wechatProduct', pText(product, 'name'), detail)
+      ? t('wechatProduct', { name: pText(product, 'name'), detail })
       : t('wechatGeneral');
     $('#wechatIdDisplay').textContent = wechatId;
     openModal(wechatModal);
@@ -86,12 +93,12 @@
             <a class="btn btn--whatsapp btn--icon btn--sm"
                href="${buildWhatsAppUrl(buildOrderMessage(product, tier))}"
                target="_blank" rel="noopener"
-               aria-label="${t('waOrderAria', name, label)}">
+               aria-label="${t('waOrderAria', { name, label })}">
               ${WA_SVG}
             </a>
             <button class="btn btn--wechat btn--icon btn--sm" type="button"
                     data-wechat="${product.id}" data-tier="${i}"
-                    aria-label="${t('wxOrderAria', name, label)}">
+                    aria-label="${t('wxOrderAria', { name, label })}">
               ${WX_SVG}
             </button>
           </div>
@@ -101,7 +108,7 @@
   }
 
   function renderProducts() {
-    productCount.textContent = t('productsCount', products.length);
+    productCount.textContent = t('productsCount', { n: products.length });
     productGrid.innerHTML = products
       .map((p) => {
         const name = pText(p, 'name');
@@ -143,7 +150,7 @@
     $('.brand__tagline').textContent = t('brandTagline');
     $('#openContact').setAttribute('aria-label', t('contactAria'));
     $('#langToggle').textContent = t('langSwitch');
-    $('#langToggle').setAttribute('aria-label', lang === 'zh' ? 'Switch to English' : '切换到中文');
+    $('#langToggle').setAttribute('aria-label', t('langSwitchAria'));
 
     $('#deliveryBanner').textContent = t('deliveryNote');
     $('#heroTitle').innerHTML = t('heroTitle');
@@ -158,7 +165,7 @@
     $('#feature3Title').textContent = t('feature3Title');
     $('#feature3Desc').textContent = t('feature3Desc');
 
-    $('#footerText').textContent = t('footer', new Date().getFullYear());
+    $('#footerText').textContent = t('footer', { year: new Date().getFullYear() });
 
     $('#wechatModalTitle').textContent = t('wechatModalTitle');
     $('#wechatIdLabel').textContent = t('wechatIdLabel');

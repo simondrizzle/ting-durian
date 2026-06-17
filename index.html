@@ -2,11 +2,12 @@
 <html lang="zh-CN">
 <head>
   <meta charset="UTF-8">
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
   <meta name="theme-color" content="#2d6cdf">
   <meta name="description" content="婷 Ting 榴莲 — 新加坡全岛包邮，WhatsApp / 微信下单">
   <title>婷 Ting 榴莲 | 新加坡全岛包邮</title>
-  <link rel="stylesheet" href="css/style.css?v=2">
+  <link rel="stylesheet" href="css/style.css?v=3">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -18,7 +19,7 @@
         <img class="brand__logo" src="images/logo.svg" alt="婷 Ting logo" width="44" height="44">
         <div>
           <h1 class="brand__name">婷 Ting 榴莲</h1>
-          <p class="brand__tagline">WHATSAPP / 微信下单 · 全岛送🇸🇬包邮</p>
+          <p class="brand__tagline">WHATSAPP / 微信下单 · 全岛送 SG 包邮</p>
         </div>
       </div>
       <div class="header__actions">
@@ -34,7 +35,7 @@
 
   <main>
     <section class="hero">
-      <div class="hero__badge" id="deliveryBanner">全岛送 🇸🇬 包邮</div>
+      <div class="hero__badge" id="deliveryBanner">全岛送 SG 包邮</div>
       <h2 class="hero__title" id="heroTitle">今日榴莲价格<br>直接下单</h2>
       <p class="hero__desc" id="heroDesc">每款产品支持不同盒数套餐。点击每一行右侧按钮，即可 WhatsApp 或微信下单。</p>
     </section>
@@ -124,8 +125,152 @@
   <!-- Toast -->
   <div class="toast" id="toast" role="status" aria-live="polite"></div>
 
-  <script src="js/config.js?v=2"></script>
-  <script src="js/i18n.js?v=2"></script>
-  <script src="js/main.js?v=2"></script>
+  <script type="application/json" id="app-data">
+  {
+    "whatsappNumber": "6580679518",
+    "wechatId": "W785125739",
+    "i18n": {
+      "zh": {
+        "pageTitle": "婷 Ting 榴莲 | 新加坡全岛包邮",
+        "metaDesc": "婷 Ting 榴莲 - 新加坡全岛包邮，WhatsApp / 微信下单",
+        "brandName": "婷 Ting 榴莲",
+        "brandTagline": "WHATSAPP / 微信下单 · 全岛送 SG 包邮",
+        "contactAria": "联系我们",
+        "closeAria": "关闭",
+        "heroTitle": "今日榴莲价格<br>直接下单",
+        "heroDesc": "每款产品支持不同盒数套餐。点击每一行右侧按钮，即可 WhatsApp 或微信下单。",
+        "productsTitle": "全部产品",
+        "productsCount": "共 {n} 款",
+        "productsAria": "产品列表",
+        "feature1Title": "新加坡全岛配送",
+        "feature1Desc": "下单后当天/隔天安排送货",
+        "feature2Title": "云顶 / 彭亨 / 柔佛精选",
+        "feature2Desc": "AAA、黑金、红虾、黑刺、金凤",
+        "feature3Title": "直接联系下单",
+        "feature3Desc": "WHATSAPP +65 8067 9518 / 微信 W785125739",
+        "footer": "© {year} 婷 Ting 榴莲 · Singapore",
+        "wechatModalTitle": "微信下单",
+        "wechatIdLabel": "微信号",
+        "copyWechat": "复制微信号",
+        "wechatHint": "复制后打开微信，搜索添加好友并发送订单信息",
+        "contactModalTitle": "联系我们",
+        "contactModalDesc": "选择您方便的联系方式",
+        "contactWhatsApp": "WhatsApp 联系",
+        "contactWechat": "微信联系",
+        "toastCopied": "微信号已复制",
+        "wechatProduct": "产品：{name}{detail}",
+        "wechatGeneral": "欢迎咨询任意产品",
+        "orderMsg": "你好，我想下单：{name} {detail}",
+        "defaultMsg": "你好，我想咨询榴莲产品",
+        "deliveryNote": "全岛送 SG 包邮",
+        "waOrderAria": "WhatsApp 下单 {name} {label}",
+        "wxOrderAria": "微信下单 {name} {label}",
+        "langSwitch": "EN",
+        "langSwitchAria": "Switch to English"
+      },
+      "en": {
+        "pageTitle": "Ting Durian | Island-wide Delivery SG",
+        "metaDesc": "Ting Durian - Island-wide delivery in Singapore. Order via WhatsApp / WeChat.",
+        "brandName": "Ting Durian",
+        "brandTagline": "Order via WhatsApp / WeChat · Free SG delivery",
+        "contactAria": "Contact us",
+        "closeAria": "Close",
+        "heroTitle": "Today's Durian Prices<br>Order Instantly",
+        "heroDesc": "Each product has bundle options. Tap the buttons on the right to order via WhatsApp or WeChat.",
+        "productsTitle": "All Products",
+        "productsCount": "{n} items",
+        "productsAria": "Product list",
+        "feature1Title": "Island-wide Delivery",
+        "feature1Desc": "Same-day or next-day delivery after order",
+        "feature2Title": "Genting / Pahang / Johor Selection",
+        "feature2Desc": "AAA, Black Gold, Red Prawn, Black Thorn, Golden Phoenix",
+        "feature3Title": "Order Directly",
+        "feature3Desc": "WhatsApp +65 8067 9518 / WeChat W785125739",
+        "footer": "© {year} Ting Durian · Singapore",
+        "wechatModalTitle": "Order via WeChat",
+        "wechatIdLabel": "WeChat ID",
+        "copyWechat": "Copy WeChat ID",
+        "wechatHint": "Copy the ID, open WeChat, add friend and send your order",
+        "contactModalTitle": "Contact Us",
+        "contactModalDesc": "Choose your preferred contact method",
+        "contactWhatsApp": "Contact via WhatsApp",
+        "contactWechat": "Contact via WeChat",
+        "toastCopied": "WeChat ID copied",
+        "wechatProduct": "Product: {name}{detail}",
+        "wechatGeneral": "Feel free to enquire about any product",
+        "orderMsg": "Hi, I'd like to order: {name} {detail}",
+        "defaultMsg": "Hi, I'd like to enquire about your durian products",
+        "deliveryNote": "Free island-wide delivery SG",
+        "waOrderAria": "WhatsApp order {name} {label}",
+        "wxOrderAria": "WeChat order {name} {label}",
+        "langSwitch": "中",
+        "langSwitchAria": "切换到中文"
+      }
+    },
+    "products": [
+      {
+        "id": 1,
+        "image": "images/products/product-1-musang.svg",
+        "prices": [
+          { "label": { "zh": "3 盒", "en": "3 boxes" }, "price": "$99" },
+          { "label": { "zh": "5 盒", "en": "5 boxes" }, "price": "$158" }
+        ],
+        "zh": { "name": "云顶高山猫山王 AAA", "subtitle": "GENGTING HIGHLAND Musang King", "weight": "500-550g / 盒 · 云顶猫", "badge": "AAA" },
+        "en": { "name": "Genting Highland Musang King AAA", "subtitle": "Premium Musang King from Genting Highlands", "weight": "500-550g / box · Genting", "badge": "AAA" }
+      },
+      {
+        "id": 2,
+        "image": "images/products/product-2-blackgold.svg",
+        "prices": [
+          { "label": { "zh": "5 盒", "en": "5 boxes" }, "price": "$99" },
+          { "label": { "zh": "10 盒", "en": "10 boxes" }, "price": "$178" }
+        ],
+        "zh": { "name": "彭亨老树40年黑金猫山王", "subtitle": "Pahang Old Tree Black Gold", "weight": "400-430g / 盒", "badge": "黑金" },
+        "en": { "name": "Pahang 40-Year Old Tree Black Gold", "subtitle": "Aged Black Gold Musang King", "weight": "400-430g / box", "badge": "Black Gold" }
+      },
+      {
+        "id": 3,
+        "image": "images/products/product-3-redprawn.svg",
+        "prices": [
+          { "label": { "zh": "5 盒", "en": "5 boxes" }, "price": "$88" },
+          { "label": { "zh": "10 盒", "en": "10 boxes" }, "price": "$138" }
+        ],
+        "zh": { "name": "柔佛红虾", "subtitle": "Johor Red Prawn", "weight": "400-430g / 盒", "badge": null },
+        "en": { "name": "Johor Red Prawn", "subtitle": "Sweet and creamy Red Prawn durian", "weight": "400-430g / box", "badge": null }
+      },
+      {
+        "id": 4,
+        "image": "images/products/product-4-blackthorn.svg",
+        "prices": [
+          { "label": { "zh": "5 盒", "en": "5 boxes" }, "price": "$89" },
+          { "label": { "zh": "10 盒", "en": "10 boxes" }, "price": "$148" }
+        ],
+        "zh": { "name": "黑刺", "subtitle": "Black Thorn", "weight": "400-430g / 盒", "badge": "热卖" },
+        "en": { "name": "Black Thorn", "subtitle": "Premium Black Thorn durian", "weight": "400-430g / box", "badge": "Hot" }
+      },
+      {
+        "id": 5,
+        "image": "images/products/product-5-golden.svg",
+        "prices": [
+          { "label": { "zh": "5 盒", "en": "5 boxes" }, "price": "$99" },
+          { "label": { "zh": "10 盒", "en": "10 boxes" }, "price": "$178" }
+        ],
+        "zh": { "name": "金凤", "subtitle": "Golden Phoenix", "weight": "400-430g / 盒", "badge": null },
+        "en": { "name": "Golden Phoenix", "subtitle": "Golden Phoenix durian", "weight": "400-430g / box", "badge": null }
+      },
+      {
+        "id": 6,
+        "image": "images/products/product-6-combo.svg",
+        "prices": [
+          { "label": { "zh": "套餐", "en": "Combo" }, "price": "$49" }
+        ],
+        "zh": { "name": "今日特别套餐", "subtitle": "芋泥 / 巧克力蛋糕 + 榴莲一起送货", "weight": null, "badge": "限定" },
+        "en": { "name": "Today's Special Combo", "subtitle": "Taro / Chocolate cake + durian delivery", "weight": null, "badge": "Special" }
+      }
+    ]
+  }
+  </script>
+
+  <script src="js/main.js?v=3"></script>
 </body>
 </html>
