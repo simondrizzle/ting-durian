@@ -146,7 +146,6 @@
     document.title = t('pageTitle');
     $('meta[name="description"]').setAttribute('content', t('metaDesc'));
 
-    $('.brand__wordmark').textContent = 'TING';
     $('#openContact').setAttribute('aria-label', t('contactAria'));
     $('#langToggle').textContent = t('langSwitch');
     $('#langToggle').setAttribute('aria-label', t('langSwitchAria'));
