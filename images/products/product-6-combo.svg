@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 375" fill="none">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="600" y2="375" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#fff5f8"/>
+      <stop offset="1" stop-color="#ffe4ec"/>
+    </linearGradient>
+    <linearGradient id="shell" x1="180" y1="100" x2="280" y2="280" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#5a9e2f"/>
+      <stop offset="1" stop-color="#3d7a1e"/>
+    </linearGradient>
+  </defs>
+  <rect width="600" height="375" fill="url(#bg)"/>
+  <ellipse cx="230" cy="290" rx="100" ry="14" fill="#1a4fa3" opacity="0.06"/>
+  <ellipse cx="400" cy="295" rx="80" ry="12" fill="#1a4fa3" opacity="0.06"/>
+  <!-- small durian -->
+  <g transform="translate(155, 95) scale(0.72)">
+    <g fill="#7cb342">
+      <path d="M100 40 L112 65 L88 65 Z"/><path d="M70 50 L85 78 L60 72 Z"/><path d="M130 50 L140 72 L115 78 Z"/>
+      <path d="M55 80 L68 110 L45 105 Z"/><path d="M145 80 L155 105 L132 110 Z"/>
+      <path d="M50 120 L60 150 L42 145 Z"/><path d="M150 120 L158 145 L140 150 Z"/>
+    </g>
+    <ellipse cx="100" cy="130" rx="58" ry="52" fill="url(#shell)"/>
+    <circle cx="85" cy="122" r="4" fill="#2d5016"/>
+    <circle cx="115" cy="122" r="4" fill="#2d5016"/>
+    <path d="M90 140 Q100 150 110 140" stroke="#2d5016" stroke-width="3" stroke-linecap="round" fill="none"/>
+    <rect x="95" y="28" width="10" height="18" rx="4" fill="#6d4c2a"/>
+  </g>
+  <!-- cake -->
+  <g transform="translate(310, 130)">
+    <ellipse cx="80" cy="130" rx="75" ry="14" fill="#8d6e63" opacity="0.3"/>
+    <path d="M20 130 L20 70 Q80 40 140 70 L140 130 Z" fill="#d7a86e"/>
+    <path d="M20 95 L140 95 L140 130 L20 130 Z" fill="#c49a6c"/>
+    <path d="M20 70 Q80 40 140 70 L140 95 L20 95 Z" fill="#e8c9a0"/>
+    <ellipse cx="80" cy="70" rx="60" ry="18" fill="#f48fb1"/>
+    <circle cx="55" cy="65" r="5" fill="#fff"/>
+    <circle cx="80" cy="58" r="5" fill="#fff"/>
+    <circle cx="105" cy="65" r="5" fill="#fff"/>
+    <text x="80" y="155" text-anchor="middle" font-family="Noto Sans SC, sans-serif" font-size="13" font-weight="700" fill="#e91e63" opacity="0.7">À’+¥≤</text>
+  </g>
+  <text x="300" y="36" text-anchor="middle" font-family="Noto Sans SC, sans-serif" font-size="14" font-weight="700" fill="#e91e63" opacity="0.6">d  Ây+W</text>
+</svg>

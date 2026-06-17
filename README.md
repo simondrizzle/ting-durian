@@ -28,11 +28,16 @@ npx serve .
 
 ### 产品图片
 
-将图片放入 `images/` 文件夹，在 `config.js` 中把 `image` 改为本地路径，例如：
+当前使用的是 `images/products/` 里的卡通榴莲图。换成实拍时：
+
+1. 把照片放进 `images/products/`（如 `musang.jpg`）
+2. 在 `config.js` 里把对应产品的 `image` 改为本地路径：
 
 ```js
-image: 'images/musang-king.jpg',
+image: 'images/products/musang.jpg',
 ```
+
+3. GitHub Desktop **Commit + Push** 即可更新网站
 
 ## 下单流程
 

@@ -22,7 +22,7 @@ const SITE_CONFIG = {
       subtitle: 'GENGTING HIGHLAND Musang King',
       weight: '500–550g / 盒 · 云顶猫',
       badge: 'AAA',
-      image: 'https://images.unsplash.com/photo-1595475207225-428b62bda831?w=600&h=400&fit=crop',
+      image: 'images/products/product-1-musang.svg',
       prices: [
         { label: '3 盒', price: '$99' },
         { label: '5 盒', price: '$158' },
@@ -34,7 +34,7 @@ const SITE_CONFIG = {
       subtitle: 'Pahang Old Tree Black Gold',
       weight: '400–430g / 盒',
       badge: '黑金',
-      image: 'https://images.unsplash.com/photo-1622206151226-18ca2c9ab4a1?w=600&h=400&fit=crop',
+      image: 'images/products/product-2-blackgold.svg',
       prices: [
         { label: '5 盒', price: '$99' },
         { label: '10 盒', price: '$178' },
@@ -46,7 +46,7 @@ const SITE_CONFIG = {
       subtitle: 'Johor Red Prawn',
       weight: '400–430g / 盒',
       badge: null,
-      image: 'https://images.unsplash.com/photo-1559180783-c7ffd4f4b8a3?w=600&h=400&fit=crop',
+      image: 'images/products/product-3-redprawn.svg',
       prices: [
         { label: '5 盒', price: '$88' },
         { label: '10 盒', price: '$138' },
@@ -58,7 +58,7 @@ const SITE_CONFIG = {
       subtitle: 'Black Thorn',
       weight: '400–430g / 盒',
       badge: '热卖',
-      image: 'https://images.unsplash.com/photo-1563729784474-d77dbb933a9e?w=600&h=400&fit=crop',
+      image: 'images/products/product-4-blackthorn.svg',
       prices: [
         { label: '5 盒', price: '$89' },
         { label: '10 盒', price: '$148' },
@@ -70,7 +70,7 @@ const SITE_CONFIG = {
       subtitle: 'Golden Phoenix',
       weight: '400–430g / 盒',
       badge: null,
-      image: 'https://images.unsplash.com/photo-1574486147802-27f9d30f3b2b?w=600&h=400&fit=crop',
+      image: 'images/products/product-5-golden.svg',
       prices: [
         { label: '5 盒', price: '$99' },
         { label: '10 盒', price: '$178' },
@@ -82,7 +82,7 @@ const SITE_CONFIG = {
       subtitle: '芋泥 / 巧克力蛋糕 + 榴莲一起送货',
       weight: null,
       badge: '❤️ 限定',
-      image: 'https://images.unsplash.com/photo-1578985545062-69928b1d9587?w=600&h=400&fit=crop',
+      image: 'images/products/product-6-combo.svg',
       prices: [
         { label: '套餐', price: '$49' },
       ],
